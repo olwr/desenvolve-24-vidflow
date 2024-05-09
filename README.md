@@ -14,8 +14,9 @@ A barra de pesquisa e os botões de categoria também estão funcionais, podendo
 ![lang: html](https://img.shields.io/badge/lang.-html-darkorange?style=plastic&logo=html5&logoColor=FF8C00&labelColor=white)
 ![lang: css](https://img.shields.io/badge/lang.-css-royalblue?style=plastic&logo=css3&logoColor=4169E1&labelColor=white)
 ![lang: javascript](https://img.shields.io/badge/lang.-javascript-gold?style=plastic&logo=javascript&logoColor=FFD700&labelColor=191919)
+![environment: node.js](https://img.shields.io/badge/environment-node.js-seagreen?style=plastic&logo=node.js&logoColor=3CB371&label=environment&labelColor=212121&color=3CB371)
 
-## Como Rodar
+## Como Executar
 
 Caso o código seja executado sem seguir os seguintes passos, ao invés dos vídeos irá aparecer uma mensagem do tratamento de erro:
 
