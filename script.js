@@ -2,6 +2,9 @@ const containerVideos = document.querySelector('.videos__container');
 const searchBar = document.querySelector('.pesquisar__input');
 const categoryBtn= document.querySelectorAll('.superior__item');
 
+const form = document.querySelector('[data-formulario]');
+
+// Show and Search Videos
 async function searchAndShow() {
     try {
         const api = await fetch("http://localhost:3000/videos");
@@ -29,33 +32,47 @@ async function searchAndShow() {
     }
 };
 
+// Send Videos
+async function postVideo(title, desc, url, img, category) {
+    const api = await fetch("http://localhost:3000/videos", {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            titulo: title,
+            descricao: `${desc} mil visualizações`,
+            url: url,
+            imagem: img,
+            categoria: category
+        })
+    });
+
+    if (!api.ok) {
+        throw new Error('Não foi possível enviar o vídeo');
+    };
+
+    const convertedApi = api.json();
+    return convertedApi;
+}
+
 searchAndShow();
 
-searchBar.addEventListener('input', filterSearch);
+async function createVideo(e) {
+    e.preventDefault();
 
-function filterSearch() {
-    const videos = document.querySelectorAll('.videos__item');
-    const filterValue = searchBar.value.toLowerCase();
+    const img = document.querySelector('[data-imagem]').value;
+    const url = document.querySelector('[data-url]').value;
+    const title = document.querySelector('[data-titulo]').value;
+    const category = document.querySelector('[data-categoria]').value;
+    const desc = Math.floor(Math.random() * 10).toString();
 
-    videos.forEach((video) => {
-        const title = video.querySelector('.titulo-video').textContent.toLowerCase();
+    try {
+        await postVideo(title, desc, url, img, category);
+        window.location.href = '../pages/sent-video.html';
+    } catch (err) {
+        alert(err);
+    };
+}
 
-        video.style.display = filterValue ? title.includes(filterValue) ? 'block' : 'none' : 'block';
-    });
-};
-
-categoryBtn.forEach((button) => {
-    const categoryName = button.getAttribute('name');
-    button.addEventListener('click', () => filterByCategory(categoryName));
-});
-
-function filterByCategory(filter) {
-    const videos = document.querySelectorAll('.videos__item');
-    const filterValue = filter.toLowerCase();
-
-    videos.forEach((video) => {
-        const category = video.querySelector('.categoria').textContent.toLowerCase();
-
-        video.style.display = filterValue!= 'tudo' ? category.includes(filterValue) ? 'block' : 'none' : 'block';
-    })
-};
+form.addEventListener('submit', e => createVideo(e));

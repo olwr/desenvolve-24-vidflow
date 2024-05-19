@@ -81,7 +81,7 @@
             "categoria": "Debates"
         },
         {
-            "titulo": "Educação coorporativa",
+            "titulo": "Educação corporativa",
             "descricao": "4 mil visualizações",
             "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
             "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
@@ -103,6 +103,14 @@
             "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
             "id": 13,
             "categoria": "Inteligência Artificial"
+        },
+        {
+            "id": "d865",
+            "titulo": "Coding Adventure: Chess",
+            "descricao": "2 mil visualizações",
+            "url": "https://www.youtube.com/embed/U4ogK0MIzqk",
+            "imagem": "https://i.ytimg.com/vi/Hq_bH6-W8I0/maxresdefault.jpg",
+            "categoria": "Programação"
         }
     ]
 }

@@ -8,6 +8,8 @@ Projeto desenvolvido durante o curso de consumo de API e tratamento de dados no 
 
 A barra de pesquisa e os botões de categoria também estão funcionais, podendo pesquisar e filtrar entre os vídeos enviados pela API fake.
 
+v1.1: Adicionada a funcionalidade de postar vídeos no arquivo `videos.json` por meio de formulário. A página do formulário pode ser acessada ao clicar no ícone de câmera no cabeçalho/topbar da página. Para voltar a página inicial, é só clicar na logo VidFlow. 
+
 ### Tecnologias
 ![ide: vs code](https://img.shields.io/badge/IDE-visual_studio_code-lightblue?style=plastic&logo=visualstudiocode&logoColor=0078D4&labelColor=white&color=0078D4)
 ![tech: git](https://img.shields.io/badge/git-orangered?style=plastic&logo=git&logoColor=FF4500&labelColor=white)
@@ -78,3 +80,4 @@ O JSON Server será iniciado e começará a servir uma API REST falsa com base n
 ### Print
 
 ![alt text](/img/Screenshot_VidFlow.jpeg)
+![alt text](/img/Screenshot_VidFlow-Post-Video.png)
